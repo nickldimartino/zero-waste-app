@@ -1,0 +1,18 @@
+{
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "esbuild": "^0.21.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/entrypoints/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
