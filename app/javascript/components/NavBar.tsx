@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function NavBar () {
   return (
@@ -11,25 +12,24 @@ export default function NavBar () {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">How To</a></li>
-            <li><a className="dropdown-item" href="#">Benefits</a></li>
-            <li><a className="dropdown-item" href="#">Roadmap</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">ESG Reporting</a></li>
+            <li><Link to="/how-to-recycle">How To</Link></li>
+            <li><Link to="/benefits-of-recycling">Benefits</Link></li>
+            <li><Link to="/roadmap-of-waste">Roadmap</Link></li>
+            <li><Link to="/esg-reporting">ESG Reporting</Link></li>
           </ul>
         </li>
         <li className="nav-item">
-          <a className="nav-link disabled" aria-disabled="true">Game</a>
+          <Link className="disabled" aria-disabled="true" to="/recycling-game">How To</Link>
         </li>
       </ul>
     </div>
