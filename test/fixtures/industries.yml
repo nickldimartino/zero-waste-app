@@ -2,10 +2,12 @@
 
 one:
   name: MyString
-  companies: MyString
   recyclables: MyString
+  companies: MyString
+  material: one
 
 two:
   name: MyString
-  companies: MyString
   recyclables: MyString
+  companies: MyString
+  material: two

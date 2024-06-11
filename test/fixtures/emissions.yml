@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  type: 
+  emissionType: MyString
   cause: MyString
 
 two:
   name: MyString
-  type: 
+  emissionType: MyString
   cause: MyString
