@@ -29,7 +29,7 @@ export default function NavBar () {
           </ul>
         </li>
         <li className="nav-item">
-          <Link className="disabled" aria-disabled="true" to="/recycling-game">How To</Link>
+          <Link to="/recycling-game">Recycling Game</Link>
         </li>
       </ul>
     </div>

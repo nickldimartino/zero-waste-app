@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 import { Route, Routes } from "react-router-dom";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer/Footer";
 import HowToRecyclePage from "../HowToRecyclePage/HowToRecyclePage";
 import BenefitsPage from "../BenefitsPage/BenefitsPage";
 import RoadmapPage from "../RoadmapPage/RoadmapPage";
