@@ -1,19 +1,22 @@
 module Api
   module V1
     class MaterialsController < ApplicationController
-
+      # Rails has a built-in CSRF
+      # without this, we couldn't send a POST request without a CSRF token
+      protect_from_forgery with: :null_session
+      
       # GET /api/v1/materials
       def index
         materials = Material.all
 
-        render json: MaterialSerializer.new(materials, options).serialized_json
+        render json: MaterialSerializer.new(materials).serialized_json
       end
 
       # GET /api/v1/materials/:slug
       def show
         material = Material.find_by(slug: params[:slug])
 
-        render json: MaterialSerializer.new(material, options).serialized_json
+        render json: MaterialSerializer.new(material).serialized_json
       end
 
       # POST /api/v1/materials
@@ -23,7 +26,7 @@ module Api
         if material.save
           render json: MaterialSerializer.new(material).serialized_json
         else
-          render json: {error: material.errors.messages}, status: 422
+          render json: { error: material.errors.messages }, status: 422
         end
       end
 
@@ -32,7 +35,7 @@ module Api
         material = Material.find_by(slug: params[:slug])
 
         if material.update(material_params)
-          render json: MaterialSerializer.new(material, options).serialized_json
+          render json: MaterialSerializer.new(material).serialized_json
         else
           render json: {error: material.errors.messages}, status: 422
         end
@@ -42,7 +45,7 @@ module Api
       def destroy
         material = Material.find_by(slug: params[:slug])
 
-        if material.destory
+        if material.destroy
           head :no_content
         else
           render json: {error: material.errors.messages}, status: 422
@@ -58,7 +61,7 @@ module Api
 
       # Used For compound documents with fast_jsonapi
       def options
-        @options ||= { include: %i[industries] }
+        @options ||= { include: %i[industry] }
       end
     end
   end
