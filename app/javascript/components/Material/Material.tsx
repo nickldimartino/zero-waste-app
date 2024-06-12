@@ -21,10 +21,12 @@ export default function Material(props: any) {
       .catch(res => console.log(res))
   }, []);
 
+  const [name, tips, facts, slug] = material.attributes;
+
   return (
     <>
       {loaded &&
-        <MaterialItem key={material.id} attributes={material.attributes} ></MaterialItem>
+        <MaterialItem key={material.id} attributes={material.attributes}></MaterialItem>
       }
     </>
   );
