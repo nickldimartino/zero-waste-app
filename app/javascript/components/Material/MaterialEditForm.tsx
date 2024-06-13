@@ -1,14 +1,18 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Props = {}
 
-function MaterialEditForm({slug}: {slug: any}) {
+function MaterialEditForm() {
   const [editMaterial, setEditMaterial] = useState<any>({
     name: "",
     tips: "",
     facts: ""
   });
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleChange = (evt: any) => {
     evt.preventDefault();
     const newMaterialData = {
@@ -22,23 +26,24 @@ function MaterialEditForm({slug}: {slug: any}) {
     evt.preventDefault();
     const csrfToken: any = document.querySelector('[name=csrf-token]')?.getAttribute('content');
     axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
+
+    const slug = location.pathname.split("/").pop();
+    const url = `/api/v1/materials/${slug}`;
     const material: any = editMaterial;
-    axios.patch(`/api/v1/materials/${slug}`, { material })
+    axios.patch(url, { material })
       .then((res: any) => {
-        setEditMaterial([...editMaterial, editMaterial])
+        setEditMaterial(editMaterial)
 
         setEditMaterial({
           name: "",
           tips: "",
           facts: ""
         });
+        
+        navigate(-1);
       })
       .catch(res => console.log("Error" + res))
   }
-
-useEffect(() => {
-
-}, [editMaterial]);
 
   return (
     <form onSubmit={handleSubmit} className="border border-primary m-2 p-1">

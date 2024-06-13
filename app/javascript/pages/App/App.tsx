@@ -9,6 +9,7 @@ import ESGReportingPage from "../ESGReportingPage/ESGReportingPage";
 import AboutPage from "../AboutPage/AboutPage";
 import Material from "../../components/Material/Material";
 import Materials from "../../components/Materials/Materials";
+import MaterialEditForm from "../../components/Material/MaterialEditForm";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/esg-reporting" element={<ESGReportingPage />} />
         <Route path="/materials" element={<Materials />} />
         <Route path="/materials/:slug" element={<Material />} />
+        <Route path="/materials/edit/:slug" element={<MaterialEditForm />} />
       </Routes>
       <Footer />
     </main>

@@ -4,12 +4,18 @@ import MaterialItem from "./MaterialItem";
 import MaterialForm from "./MaterialForm";
 
 export default function Materials() {
+  const [loaded, setLoaded] = useState(false);
+  const [showAddButton, setShowAddButton] = useState(false);
   const [materials, setMaterials] = useState<any>([]);
   const [material, setMaterial] = useState({
     name: "",
     tips: "",
     facts: ""
   });
+
+  const handleShowMaterialAddForm = () =>  {
+    setShowAddButton(!showAddButton);
+  }
 
   const handleChange = (evt: any) => {
     evt.preventDefault();
@@ -42,21 +48,29 @@ export default function Materials() {
     // update materials in our state
 
     axios.get('/api/v1/materials.json')
-      .then( res => {
-        setMaterials(res.data.data)
+      .then(res => {
+        setMaterials(res.data.data);
+        setLoaded(true);
       })
-      .catch( res => console.log(res))
+      .catch(res => console.log(res))
   }, [materials.length]);
 
-  const materialsList: React.JSX.Element[] = materials.map( (material: any, idx: number) => {
+  const materialsList: React.JSX.Element[] = materials.map((material: any, idx: number) => {
     return (<MaterialItem key={material.id} attributes={material.attributes}></MaterialItem>)
   });
 
   return (
     <>
-      <h1>This is the Materials#index</h1>
-      <ul>{materialsList}</ul>
-      <MaterialForm handleChange={handleChange} handleSubmit={handleSubmit}/>
+      {loaded &&
+        <>
+          <h1>This is the Materials#index</h1>
+          <ul>{materialsList}</ul>
+          <button className="btn btn-primary" onClick={handleShowMaterialAddForm}>Click to add a new material</button>
+          {showAddButton && 
+            <MaterialForm handleChange={handleChange} handleSubmit={handleSubmit} />
+          }
+        </>
+      }
     </>
   );
 }
