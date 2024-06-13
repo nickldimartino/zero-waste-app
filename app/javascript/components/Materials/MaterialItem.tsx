@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom'
 
 function MaterialItem({ attributes }: { attributes: any }) {
   return (
-    <div className="card" style={{"width":"18rem"}}>
-      <img src="..." className="card-img-top" alt="..." />
-      <div className="card-body">
-        <h5 className="card-title">{attributes.name}</h5>
-        <p className="card-text">{attributes.tips}</p>
-        <p className="card-text">{attributes.facts}</p>
+    <div className="card m-3" style={{"width":"18rem"}}>
+      <div className="card-body d-flex flex-column justify-content-center">
+        <h3 className="card-title text-center">{attributes.name}</h3>
         <Link to={`/materials/${attributes.slug}`} className="btn btn-primary">View Material</Link>
       </div>
     </div>

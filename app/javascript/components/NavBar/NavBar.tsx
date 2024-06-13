@@ -24,6 +24,8 @@ export default function NavBar () {
           <ul className="dropdown-menu">
             <li><Link to="/how-to-recycle">How To</Link></li>
             <li><Link to="/benefits-of-recycling">Benefits</Link></li>
+            <li><Link to="/materials">Materials</Link></li>
+            <li><Link to="/industries">Industries</Link></li>
             <li><Link to="/roadmap-of-waste">Roadmap</Link></li>
             <li><Link to="/esg-reporting">ESG Reporting</Link></li>
           </ul>

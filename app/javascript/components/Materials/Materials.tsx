@@ -56,15 +56,15 @@ export default function Materials() {
   }, [materials.length]);
 
   const materialsList: React.JSX.Element[] = materials.map((material: any, idx: number) => {
-    return (<MaterialItem key={material.id} attributes={material.attributes}></MaterialItem>)
+    return (<MaterialItem key={idx} attributes={material.attributes}></MaterialItem>)
   });
 
   return (
     <>
       {loaded &&
         <>
-          <h1>This is the Materials#index</h1>
-          <ul>{materialsList}</ul>
+          <h1 className="text-center fw-bolder fs-1">Recyclable Materials</h1>
+          <div className="d-flex justify-content-center align-items-center flex-wrap">{materialsList}</div>
           <button className="btn btn-primary" onClick={handleShowMaterialAddForm}>Click to add a new material</button>
           {showAddButton && 
             <MaterialForm handleChange={handleChange} handleSubmit={handleSubmit} />

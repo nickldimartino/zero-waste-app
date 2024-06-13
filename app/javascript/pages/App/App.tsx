@@ -24,6 +24,9 @@ export default function App() {
         <Route path="/materials" element={<Materials />} />
         <Route path="/materials/:slug" element={<Material />} />
         <Route path="/materials/edit/:slug" element={<MaterialEditForm />} />
+        <Route path="/industries" element={<Materials />} />
+        <Route path="/industries/:slug" element={<Material />} />
+        <Route path="/industries/edit/:slug" element={<MaterialEditForm />} />
       </Routes>
       <Footer />
     </main>
