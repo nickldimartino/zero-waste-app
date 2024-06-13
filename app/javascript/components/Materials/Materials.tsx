@@ -49,7 +49,7 @@ export default function Materials() {
   }, [materials.length]);
 
   const materialsList: React.JSX.Element[] = materials.map( (material: any, idx: number) => {
-    return (<MaterialItem key={idx} attributes={material.attributes}></MaterialItem>)
+    return (<MaterialItem key={material.id} attributes={material.attributes}></MaterialItem>)
   });
 
   return (

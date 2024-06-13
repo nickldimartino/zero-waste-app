@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-type Props = {}
-
 function MaterialItem({ attributes }: { attributes: any }) {
+
   return (
     <div className="card" style={{"width":"18rem"}}>
       <img src="..." className="card-img-top" alt="..." />
