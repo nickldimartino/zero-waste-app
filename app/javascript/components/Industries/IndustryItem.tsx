@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function MaterialItem({ attributes }: { attributes: any }) {
+export default function IndustryItem({ attributes }: { attributes: any }) {
   return (
     <div className="card m-3 bg-info rounded shadow" style={{"width":"18rem"}}>
       <div className="card-body d-flex flex-column justify-content-center">
@@ -11,5 +11,3 @@ function MaterialItem({ attributes }: { attributes: any }) {
     </div>
   )
 }
-
-export default MaterialItem

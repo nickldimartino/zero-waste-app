@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-export default function Material(props: any) {
+export default function Industry(props: any) {
   const [material, setMaterial] = useState<any>([]);
   const [loaded, setLoaded] = useState(false);
   const location = useLocation();
@@ -37,7 +37,7 @@ export default function Material(props: any) {
   return (
     <>
       {loaded &&
-        <div className="card" style={{"width":"18rem"}}>
+        <div className="card shadow-sm" style={{"width":"18rem"}}>
         <img src="..." className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{material.attributes.name}</h5>
