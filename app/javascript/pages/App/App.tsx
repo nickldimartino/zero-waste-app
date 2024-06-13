@@ -8,11 +8,9 @@ import RoadmapPage from "../RoadmapPage/RoadmapPage";
 import ESGReportingPage from "../ESGReportingPage/ESGReportingPage";
 import AboutPage from "../AboutPage/AboutPage";
 import Material from "../../components/Materials/Material";
-import Materials from "../Materials/MaterialsPage";
+import MaterialsPage from "../Materials/MaterialsPage";
 import MaterialEditForm from "../../components/Materials/MaterialEditForm";
-import Industry from "../../components/Industries/Industry";
-import Industries from "../Industries/IndustriesPage";
-import IndustryEditForm from "../../components/Industries/IndustryEditForm";
+
 import IndustriesPage from "../Industries/IndustriesPage";
 
 export default function App() {
@@ -25,12 +23,10 @@ export default function App() {
         <Route path="/benefits-of-recycling" element={<BenefitsPage />} />
         <Route path="/roadmap-of-waste" element={<RoadmapPage />} />
         <Route path="/esg-reporting" element={<ESGReportingPage />} />
-        <Route path="/materials" element={<Materials />} />
+        <Route path="/materials" element={<MaterialsPage />} />
         <Route path="/materials/:slug" element={<Material />} />
         <Route path="/materials/edit/:slug" element={<MaterialEditForm />} />
-        <Route path="/industries" element={<Industries />} />
-        <Route path="/industries/:slug" element={<Industry />} />
-        <Route path="/industries/edit/:slug" element={<IndustryEditForm />} />
+        <Route path="/industries" element={<IndustriesPage />} />
       </Routes>
       <Footer />
     </main>

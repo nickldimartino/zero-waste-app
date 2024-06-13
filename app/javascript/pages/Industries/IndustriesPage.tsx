@@ -1,79 +1,69 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import MaterialItem from "../../components/Materials/MaterialItem";
-import MaterialForm from "../../components/Materials/MaterialNewForm";
+import IndustryItem from "../../components/Industries/IndustryItem";
 
 export default function IndustriesPage() {
   const [loaded, setLoaded] = useState(false);
   const [showAddButton, setShowAddButton] = useState(false);
-  const [materials, setMaterials] = useState<any>([]);
-  const [material, setMaterial] = useState({
+  const [industries, setIndustries] = useState<any>([]);
+  const [industry, setIndustry] = useState({
     name: "",
-    tips: "",
-    facts: ""
+    recyclables: "",
+    companies: ""
   });
 
-  const handleShowMaterialAddForm = () =>  {
+  const handleShowIndustryAddForm = () => {
     setShowAddButton(!showAddButton);
   }
 
   const handleChange = (evt: any) => {
     evt.preventDefault();
-    const newMaterialData = {
-      ...material,
+    const newIndustryData = {
+      ...industry,
       [evt.target.name]: evt.target.value,
     };
-    setMaterial(newMaterialData)
+    setIndustry(newIndustryData)
   }
 
   const handleSubmit = (evt: any) => {
     const csrfToken: any = document.querySelector('[name=csrf-token]')?.getAttribute('content');
     axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
 
-    axios.post(`/api/v1/materials`, { material })
+    axios.post(`/api/v1/industries`, { industry })
       .then((res: any) => {
-        setMaterials([...materials, material])
+        setIndustries([...industries, industry])
 
-        setMaterial({
+        setIndustry({
           name: "",
-          tips: "",
-          facts: ""
+          recyclables: "",
+          companies: ""
         });
       })
       .catch(res => console.log("Error" + res))
   }
 
   useEffect(() => {
-    // get all materials from api
-    // update materials in our state
+    // get all industries from api
+    // update industries in our state
 
-    axios.get('/api/v1/materials.json')
+    axios.get('/api/v1/industries.json')
       .then(res => {
-        setMaterials(res.data.data);
+        setIndustries(res.data.data);
         setLoaded(true);
       })
       .catch(res => console.log(res))
-  }, [materials.length]);
+  }, [industries.length]);
 
-  const materialsList: React.JSX.Element[] = materials.map((material: any, idx: number) => {
-    return (<MaterialItem key={idx} attributes={material.attributes}></MaterialItem>)
+  const industriesList: React.JSX.Element[] = industries.map((industry: any, idx: number) => {
+    return (<IndustryItem key={idx} attributes={industry.attributes}></IndustryItem>)
   });
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
       {loaded &&
         <>
-          <h1 className="text-center fw-bolder fs-1">Recyclable Materials</h1>
-          <div className="d-flex justify-content-center align-items-center flex-wrap">{materialsList}</div>
-          {!showAddButton ?
-            <button className="btn btn-warning w-25 shadow-sm" onClick={handleShowMaterialAddForm}>Click to add a new material</button>
-           : 
-            <button className="btn btn-warning w-25 shadow-sm" onClick={handleShowMaterialAddForm}>Click to hide form</button>
-          }
-          
-          {showAddButton && 
-            <MaterialForm handleChange={handleChange} handleSubmit={handleSubmit} />
-          }
+          <h1 className="text-center fw-bolder fs-1">Industries that Should Recycle</h1>
+          <div className="d-flex justify-content-center align-items-center flex-wrap">{industriesList}</div>
         </>
       }
     </div>
