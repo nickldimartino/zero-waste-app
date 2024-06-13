@@ -11,7 +11,7 @@ export default function NavBar () {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
+        <li className="nav-item ">
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
@@ -27,9 +27,6 @@ export default function NavBar () {
             <li><Link to="/roadmap-of-waste">Roadmap</Link></li>
             <li><Link to="/esg-reporting">ESG Reporting</Link></li>
           </ul>
-        </li>
-        <li className="nav-item">
-          <Link to="/recycling-game">Recycling Game</Link>
         </li>
       </ul>
     </div>

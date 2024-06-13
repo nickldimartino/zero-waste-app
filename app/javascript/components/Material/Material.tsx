@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import MaterialEditForm from "./MaterialEditForm";
 
 export default function Material(props: any) {
   const [material, setMaterial] = useState<any>([]);
   const [loaded, setLoaded] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const [showEditForm, setShowEditForm] = useState(false);
+
+  const handleOnClick = () => {
+    setShowEditForm(!showEditForm);
+  }
 
   const deleteMaterial = (slug: any) => {
     const csrfToken: any = document.querySelector('[name=csrf-token]')?.getAttribute('content');
@@ -44,12 +50,14 @@ export default function Material(props: any) {
           <h5 className="card-title">{material.attributes.name}</h5>
           <p className="card-text">{material.attributes.tips}</p>
           <p className="card-text">{material.attributes.facts}</p>
+          <button onClick={handleOnClick}>Edit Material</button>
           <form onClick={() => deleteMaterial(material.attributes.slug)}>
             <button type="submit" className="btn btn-danger">Delete</button>
           </form>
         </div>
       </div>
       }
+      { showEditForm ? <MaterialEditForm slug={material.attributes.slug}/> : <></>}
     </>
   );
 }

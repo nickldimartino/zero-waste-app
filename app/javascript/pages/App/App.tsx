@@ -5,7 +5,6 @@ import Footer from "../../components/Footer/Footer";
 import HowToRecyclePage from "../HowToRecyclePage/HowToRecyclePage";
 import BenefitsPage from "../BenefitsPage/BenefitsPage";
 import RoadmapPage from "../RoadmapPage/RoadmapPage";
-import RecyclingGamePage from "../RecyclingGamePage/RecyclingGamePage";
 import ESGReportingPage from "../ESGReportingPage/ESGReportingPage";
 import AboutPage from "../AboutPage/AboutPage";
 import Material from "../../components/Material/Material";
@@ -20,7 +19,6 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/benefits-of-recycling" element={<BenefitsPage />} />
         <Route path="/roadmap-of-waste" element={<RoadmapPage />} />
-        <Route path="/recycling-game" element={<RecyclingGamePage />} />
         <Route path="/esg-reporting" element={<ESGReportingPage />} />
         <Route path="/materials" element={<Materials />} />
         <Route path="/materials/:slug" element={<Material />} />
