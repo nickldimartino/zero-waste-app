@@ -35,7 +35,7 @@ export default function Material() {
   }, []);
 
   return (
-    <>
+    <div className="d-flex justify-content-center align-items-center">
       {loaded &&
         <div className="card m-3 bg-info rounded shadow w-50" style={{ "width": "18rem" }}>
           <div className="card-body">
@@ -46,15 +46,16 @@ export default function Material() {
             <hr />
             <div className="fs-5 text-light fw-bold">Facts</div>
             <ul>{material.attributes.facts.split(".").map((fact: string, idx: number) => { return <li key={idx} className="fs-7 text-light fst-italic">{fact}</li> })}</ul>
-            <div className="d-flex flex-row">
+            <hr />
+            <div className="d-flex flex-row mt-3">
               <Link className="btn btn-warning" to={`/materials/edit/${slug}`}>Edit Material</Link>
               <form onClick={() => deleteMaterial(material.attributes.slug)}>
-                <button type="submit" className="btn btn-danger ml-2">Delete</button>
+                <button type="submit" className="btn btn-danger ms-2">Delete</button>
               </form>
             </div>
           </div>
         </div>
       }
-    </>
+    </div>
   );
 }

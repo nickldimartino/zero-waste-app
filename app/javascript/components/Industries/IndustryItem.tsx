@@ -4,12 +4,12 @@ export default function IndustryItem({ attributes }: { attributes: any }) {
   const companies = attributes.companies.split(".");
   const recyclables = attributes.recyclables.split(".");
 
-  const companyList: any = companies.map((company: string) => {
-    return <li className="fs-7 text-light fst-italic">{company}</li>
+  const companyList: any = companies.map((company: string, idx: number) => {
+    return <li key={idx} className="fs-7 text-light fst-italic">{company}</li>
   });
 
-  const recyclablesList: any = recyclables.map((recyclable: string) => {
-    return <li className="fs-7 text-light fst-italic">{recyclable}</li>
+  const recyclablesList: any = recyclables.map((recyclable: string, idx: number) => {
+    return <li key={idx} className="fs-7 text-light fst-italic">{recyclable}</li>
   });
 
   return (
