@@ -28,7 +28,6 @@ export default function App() {
         <Route path="/materials/edit/:slug" element={<MaterialEditForm />} />
         <Route path="/industries" element={<IndustriesPage />} />
       </Routes>
-      <Footer />
     </main>
   )
 }

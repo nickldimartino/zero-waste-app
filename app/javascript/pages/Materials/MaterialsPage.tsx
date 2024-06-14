@@ -60,7 +60,7 @@ export default function MaterialsPage() {
   });
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center">
+    <div className="d-flex flex-column justify-content-center align-items-center p-3">
       {loaded &&
         <>
           <h1 className="text-center fw-bolder fs-1">Recyclable Materials</h1>

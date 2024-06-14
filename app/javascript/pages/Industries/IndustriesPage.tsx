@@ -59,10 +59,10 @@ export default function IndustriesPage() {
   });
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center">
+    <div className="d-flex flex-column justify-content-center align-items-center p-3">
       {loaded &&
         <>
-          <h1 className="text-center fw-bolder fs-1">Industries that Should Recycle</h1>
+          <h1 className="text-center fw-bold fs-1">Impacted Industries and Companies of RoadRunner Waste Management</h1>
           <div className="d-flex justify-content-center align-items-center flex-wrap">{industriesList}</div>
         </>
       }

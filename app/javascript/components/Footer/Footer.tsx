@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <>
       {relativeLocation ? (
-        <div className="bg-success position-relative mt-3 w-100">Footer Relative</div>
+        <div className="bg-success position-relative mt-10 w-100">Footer Relative</div>
       ) : (
-        <div className="bg-success position-fixed bottom-0 mt-3 w-100">Footer Fixed</div>
+        <></>
       )}
     </>
   )

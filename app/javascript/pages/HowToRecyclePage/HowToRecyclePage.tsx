@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 export default function HowToRecyclePage() {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
-      <div className="fs-2">How to Recycle</div>
-      <div className="fs-3">Recycling is easy! You're just a couple steps away from making this planet cleaner.</div>
+      <div className="fs-2 fw-bold">How to Recycle</div>
+      <div className="alert alert-info fs-5 mt-2" role="alert">
+        Recycling is easy! You're just a couple steps away from making this planet cleaner.
+      </div>
       <div className="d-flex fled-row flex-wrap justify-content-center">
         <div className="card w-25 m-3 bg-info rounded shadow text-light">
           <div className="card-body">
