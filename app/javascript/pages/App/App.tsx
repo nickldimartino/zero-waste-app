@@ -7,16 +7,18 @@ import RoadmapPage from "../RoadmapPage/RoadmapPage";
 import EmissionsPage from "../EmissionsPage/EmissionsPage";
 import AboutPage from "../AboutPage/AboutPage";
 import Material from "../../components/Materials/Material";
-import MaterialsPage from "../Materials/MaterialsPage";
+import MaterialsPage from "../MaterialsPage/MaterialsPage";
 import MaterialEditForm from "../../components/Materials/MaterialEditForm";
 
-import IndustriesPage from "../Industries/IndustriesPage";
+import IndustriesPage from "../IndustriesPage/IndustriesPage";
+import HomePage from "../HomePage/HomePage";
 
 export default function App() {
   return (
     <main>
       <NavBar />
       <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route path="/how-to-recycle" element={<HowToRecyclePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/benefits-of-recycling" element={<BenefitsPage />} />
