@@ -1,4 +1,4 @@
-# <h1 align="center">Zero Waste 101</h1>
+# <h1 align="center">Zero Waste and Recycling 101</h1>
 
 <div align="center">
  <a href="https://nickldimartino.github.io/portfolio/" target="_blank">
@@ -14,7 +14,7 @@
 
 ## 📝 Description
 
-Welcome to Zero Waste 101! Description coming soon...
+Welcome to Zero Waste and Recycling! Learn how to recycle and the different types of recyclable materials on thhis web application. Read all about the industries impacted, the types of emissions, what happens to your waste, and how you can recycle too!
 
 ## 🖼️ Screenshots
 
@@ -23,7 +23,14 @@ Welcome to Zero Waste 101! Description coming soon...
  
  | Description | Screenshot |
  |------------ | ------------|
- | <h3 align="center">Home Page</h3> | <img src="" width="500">
+ | <h3 align="center">Home Page</h3> | <img src="./public/imgs/home-page.png" width="500">
+ | <h3 align="center">Home Page</h3> | <img src="./public/imgs/materials-page.png" width="500">
+ | <h3 align="center">Home Page</h3> | <img src="./public/imgs/industries-page.png" width="500">
+ | <h3 align="center">Home Page</h3> | <img src="./public/imgs/emissions-page.png" width="500">
+ | <h3 align="center">Home Page</h3> | <img src="./public/imgs/how-to-recycle-page.png" width="500">
+ | <h3 align="center">Home Page</h3> | <img src="./public/imgs/benefits-of-recycling-page.png" width="500">
+ | <h3 align="center">Home Page</h3> | <img src="./public/imgs/roadmap-page.png" width="500">
+ | <h3 align="center">Home Page</h3> | <img src="./public/imgs/about-page.png" width="500">
 
  
 </details>
@@ -55,7 +62,13 @@ Welcome to Zero Waste 101! Description coming soon...
 <details>
 <summary>How to Navigate the App</summary>
 
-1. Coming soon...
+1. Upon entering the web application, you will be shown a list of webpages you can visit to view information about the Road to Zero Waste and Recycling.
+
+2. You can also use the navbar for the same navigation abilities.
+
+3. On the materials page, you can also add, edit, and delete materials as you see fit.
+
+4. View the About page to visit my social media pages.
 </details>
 
 ### 🔗 Links
@@ -66,3 +79,4 @@ Comning soon...
 
 - [ ] Find and fix possible bugs
 - [ ] Refactor code
+- [ ] Add a recycling-related game
