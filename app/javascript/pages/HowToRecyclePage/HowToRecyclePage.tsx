@@ -9,7 +9,7 @@ export default function HowToRecyclePage() {
         Recycling is easy! You're just a couple steps away from making this planet cleaner.
       </div>
       <div className="d-flex fled-row flex-wrap justify-content-center">
-        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
+        <div className="card w-25 m-3 bg-info rounded shadow text-light">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Step 1</div>
             <hr />
@@ -19,7 +19,7 @@ export default function HowToRecyclePage() {
             </ul>
           </div>
         </div>
-        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
+        <div className="card w-25 m-3 bg-info rounded shadow text-light">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Step 2</div>
             <hr />
@@ -30,7 +30,7 @@ export default function HowToRecyclePage() {
             </ul>
           </div>
         </div>
-        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
+        <div className="card w-25 m-3 bg-info rounded shadow text-light">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Step 3</div>
             <hr />

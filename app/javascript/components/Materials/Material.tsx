@@ -37,20 +37,20 @@ export default function Material() {
   return (
     <div className="d-flex justify-content-center align-items-center">
       {loaded &&
-        <div className="card m-3 bg-light rounded shadow w-50" style={{ "width": "18rem" }}>
+        <div className="card m-3 bg-info rounded shadow w-50" style={{ "width": "18rem" }}>
           <div className="card-body">
-            <h5 className="card-title text-info fs-3">{material.attributes.name}</h5>
+            <h5 className="card-title text-light fs-3">{material.attributes.name}</h5>
             <hr />
-            <div className="fs-5 text-info fw-bold">Tips</div>
-            <ul>{material.attributes.tips.split(".").map((tip: string, idx: number) => { return <li key={idx} className="fs-7 text-info fst-italic">{tip}</li> })}</ul>
+            <div className="fs-5 text-light fw-bold">Tips</div>
+            <ul>{material.attributes.tips.split(".").map((tip: string, idx: number) => { return <li key={idx} className="fs-7 text-light fst-italic">{tip}</li> })}</ul>
             <hr />
-            <div className="fs-5 text-info fw-bold">Facts</div>
-            <ul>{material.attributes.facts.split(".").map((fact: string, idx: number) => { return <li key={idx} className="fs-7 text-info fst-italic">{fact}</li> })}</ul>
+            <div className="fs-5 text-light fw-bold">Facts</div>
+            <ul>{material.attributes.facts.split(".").map((fact: string, idx: number) => { return <li key={idx} className="fs-7 text-light fst-italic">{fact}</li> })}</ul>
             <hr />
             <div className="d-flex flex-row mt-3">
-              <Link className="btn btn-outline-warning" to={`/materials/edit/${slug}`}>Edit Material</Link>
+              <Link className="btn btn-warning" to={`/materials/edit/${slug}`}>Edit Material</Link>
               <form onClick={() => deleteMaterial(material.attributes.slug)}>
-                <button type="submit" className="btn btn-outline-danger ms-2">Delete</button>
+                <button type="submit" className="btn btn-danger ms-2">Delete</button>
               </form>
             </div>
           </div>
