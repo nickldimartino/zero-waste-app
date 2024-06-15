@@ -1,11 +1,10 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { Route, Routes } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
 import HowToRecyclePage from "../HowToRecyclePage/HowToRecyclePage";
 import BenefitsPage from "../BenefitsPage/BenefitsPage";
 import RoadmapPage from "../RoadmapPage/RoadmapPage";
-import ESGReportingPage from "../ESGReportingPage/ESGReportingPage";
+import EmissionsPage from "../EmissionsPage/EmissionsPage";
 import AboutPage from "../AboutPage/AboutPage";
 import Material from "../../components/Materials/Material";
 import MaterialsPage from "../Materials/MaterialsPage";
@@ -22,7 +21,7 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/benefits-of-recycling" element={<BenefitsPage />} />
         <Route path="/roadmap-of-waste" element={<RoadmapPage />} />
-        <Route path="/esg-reporting" element={<ESGReportingPage />} />
+        <Route path="/emissions" element={<EmissionsPage />} />
         <Route path="/materials" element={<MaterialsPage />} />
         <Route path="/materials/:slug" element={<Material />} />
         <Route path="/materials/edit/:slug" element={<MaterialEditForm />} />

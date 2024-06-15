@@ -26,7 +26,7 @@ export default function NavBar() {
                 <li><Link className="text-success fw-bold" to="/materials">Materials</Link></li>
                 <li><Link className="text-success fw-bold" to="/industries">Industries</Link></li>
                 <li><Link className="text-success fw-bold" to="/roadmap-of-waste">Roadmap</Link></li>
-                <li><Link className="text-success fw-bold" to="/esg-reporting">ESG Reporting</Link></li>
+                <li><Link className="text-success fw-bold" to="/emissions">Emissions</Link></li>
               </ul>
             </li>
           </ul>
