@@ -83,7 +83,7 @@ export default function BenefitsPage() {
         </div>
       </div>
       <div className="alert alert-info mt-3 mb-4" role="alert">
-        More information can be found out at <a className="link-underline-dark" href="https://www.epa.gov/circulareconomy/us-recycling-system" target="_blank">epa.gov</a>
+        More information can be found out at <a className="border-bottom fw-bold" href="https://www.epa.gov/circulareconomy/us-recycling-system" target="_blank">epa.gov</a>
       </div>
     </div>
   )

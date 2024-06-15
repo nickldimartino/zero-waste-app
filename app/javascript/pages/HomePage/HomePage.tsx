@@ -5,7 +5,7 @@ import InfoCardItem from '../../components/InfoCards/InfoCardItem';
 function HomePage() {
   const infoCardsList: React.JSX.Element = infoCards.map((card: any, idx: number) => {
     return <InfoCardItem name={card.name} info={card.info} link={card.link}></InfoCardItem>
-  })
+  });
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
