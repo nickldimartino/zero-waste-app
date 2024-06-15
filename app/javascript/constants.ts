@@ -72,4 +72,59 @@ export const roadmapCards: any = [
       "Te materials collected for recycling vary from area to area; so although an item of packaging  may state that it is recyclable, only put it out for collection if your local authority has confirmed that they can accept it",
     ]
   }
-]
+];
+
+export const benefitsCards = [
+  {
+    name: "Environment",
+    facts: [
+      "Reduces the amount of waste sent to landfills and incinerators",
+      "Conserves natural resources such as timber, water and minerals",
+      "Prevents pollution and reduces greenhouse gases by reducing the need to mine and process new raw materials",
+    ]
+  },
+  {
+    name: "Economy",
+    facts: [
+      "Increases economic security by tapping a domestic source of materials",
+      "Saves energy"
+    ]
+  },
+  {
+    name: "Communities",
+    facts: [
+      "Supports American manufacturing and conserves valuable resources",
+      "Helps create jobs in the recycling and manufacturing industries in the United States"
+    ]
+  },
+  {
+    name: "Knowledge and Understanding",
+    facts: [
+      "Most Americans want to recycle, as they believe recycling provides an opportunity for them to be responsible caretakers of the Earth",
+      "It can be difficult for consumers to understand what materials can be recycled, how materials can be recycled, and where to recycle different materials",
+      "This confusion often leads to placing recyclables in the trash or throwing trash in the recycling bin or cart",
+    ]
+  },
+  {
+    name: "Domestic Markets",
+    facts: [
+      "Historically, some of the recycled materials generated in the United States have been exported internationally",
+      "Changing international policies have limited the export of materials. We need to better integrate recycled materials and end-of-life management into product and packaging designs",
+      "We need to improve communication among the different sectors of the recycling system to strengthen existing materials markets and to develop new innovative markets",
+    ]
+  },
+  {
+    name: "Infrastructure",
+    facts: [
+      "America's recycling infrastructure has not kept pace with today's waste stream",
+      "Communication between the manufacturers of new materials and products and the recycling industry needs to be enhanced to prepare for and optimally manage the recycling of new materials",
+    ]
+  },
+  {
+    name: "Consistent Measurements",
+    facts: [
+      "Entities across the recycling system agree that more consistent measurement methodologies are needed to measure recycling system performance",
+      "These more standardized metrics can then be used to create effective goals and track progress"
+    ]
+  }
+];
