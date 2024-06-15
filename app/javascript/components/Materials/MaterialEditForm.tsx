@@ -39,29 +39,28 @@ function MaterialEditForm() {
           tips: "",
           facts: ""
         });
-        
+
         navigate(-1);
       })
       .catch(res => console.log("Error" + res))
   }
 
   return (
-    <form onSubmit={handleSubmit} className="border border-primary m-2 p-1">
-      <h1>Edit Material</h1>
-      <div className="mb-3">
-        <label className="form-label">Material Name</label>
-        <input name="name" onChange={handleChange} type="text" className="form-control" id="material-name" />
-      </div>
-      <div className="mb-3">
-        <label className="form-label">Material Tips</label>
-        <input name="tips" onChange={handleChange} type="text" className="form-control" id="material-tips"/>
-      </div>
-      <div className="mb-3">
-        <label className="form-label">Material Facts</label>
-        <input name="facts" onChange={handleChange} type="text" className="form-control" id="material-facts"/>
-      </div>
-      <button type="submit" className="btn btn-primary">Submit</button>
-    </form>
+    <div className="d-flex justify-content-center">
+      <form onSubmit={handleSubmit} className="border border-2 border-info shadow m-2 p-1 bg-light text-info rounded d-flex flex-column justify-content-center align-items-center" style={{"width": "50%"}}>
+        <div className="fs-4">Edit the Material</div>
+        <div className="mb-1 w-75">
+          <input name="name" onChange={handleChange} type="text" className="form-control" id="material-name" placeholder="Material Name" />
+        </div>
+        <div className="mb-1 w-75">
+          <input name="tips" onChange={handleChange} type="text" className="form-control" id="material-tips" placeholder="Material Tips" />
+        </div>
+        <div className="mb-1 w-75">
+          <input name="facts" onChange={handleChange} type="text" className="form-control" id="material-facts" placeholder="Material Facts" />
+        </div>
+        <button type="submit" className="btn btn-info my-2 text-light w-25">Submit</button>
+      </form>
+    </div>
   )
 }
 

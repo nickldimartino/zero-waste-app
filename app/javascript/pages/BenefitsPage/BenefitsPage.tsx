@@ -3,9 +3,9 @@ import React from "react";
 export default function BenefitsPage() {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
-      <div className="fs-2 fw-bold">Benefits of Recycling and Moving to Zero Waste</div>
+      <div className="fs-2 fw-bold text-info">Benefits of Recycling and Moving to Zero Waste</div>
       <div className="d-flex fled-row flex-wrap justify-content-center">
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Environment</div>
             <hr />
@@ -16,7 +16,7 @@ export default function BenefitsPage() {
             </ul>
           </div>
         </div>
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Economy</div>
             <hr />
@@ -26,7 +26,7 @@ export default function BenefitsPage() {
             </ul>
           </div>
         </div>
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Communities</div>
             <hr />
@@ -37,9 +37,9 @@ export default function BenefitsPage() {
           </div>
         </div>
       </div>
-      <div className="fs-2 fw-bold">Drawbacks and Challenges</div>
+      <div className="fs-2 fw-bold text-info">Drawbacks and Challenges</div>
       <div className="d-flex fled-row flex-wrap justify-content-center">
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Knowledge and Understanding</div>
             <hr />
@@ -50,7 +50,7 @@ export default function BenefitsPage() {
             </ul>
           </div>
         </div>
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Domestic Markets</div>
             <hr />
@@ -61,7 +61,7 @@ export default function BenefitsPage() {
             </ul>
           </div>
         </div>
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Infrastructure</div>
             <hr />
@@ -71,7 +71,7 @@ export default function BenefitsPage() {
             </ul>
           </div>
         </div>
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Consistent Measurements</div>
             <hr />
@@ -82,7 +82,7 @@ export default function BenefitsPage() {
           </div>
         </div>
       </div>
-      <div className="alert alert-warning mt-3 mb-4" role="alert">
+      <div className="alert alert-info mt-3 mb-4" role="alert">
         More information can be found out at <a className="link-underline-dark" href="https://www.epa.gov/circulareconomy/us-recycling-system" target="_blank">epa.gov</a>
       </div>
     </div>

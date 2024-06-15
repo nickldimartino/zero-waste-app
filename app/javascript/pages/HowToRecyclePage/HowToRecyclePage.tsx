@@ -4,22 +4,22 @@ import { Link } from "react-router-dom";
 export default function HowToRecyclePage() {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
-      <div className="fs-2 fw-bold">How to Recycle</div>
+      <div className="fs-2 fw-bold text-info">How to Recycle</div>
       <div className="alert alert-info fs-5 mt-2" role="alert">
         Recycling is easy! You're just a couple steps away from making this planet cleaner.
       </div>
       <div className="d-flex fled-row flex-wrap justify-content-center">
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Step 1</div>
             <hr />
             <ul>
-              <li className="card-text my-2">Determine the type of item you're holding by visiting <Link className="fw-bold" to="/materials">this</Link> page</li>
+              <li className="card-text my-2">Determine the type of item you're holding by visiting <Link className="fw-bold border-bottom" to="/materials">this</Link> page</li>
               <li className="card-text my-2">Is it plastic? Cardboard? Metal? A banana peel? Knowing what kind of item you're holding is crucial.</li>
             </ul>
           </div>
         </div>
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Step 2</div>
             <hr />
@@ -30,7 +30,7 @@ export default function HowToRecyclePage() {
             </ul>
           </div>
         </div>
-        <div className="card w-25 m-3 bg-info rounded shadow text-light">
+        <div className="card w-25 m-3 bg-light rounded shadow text-info border border-2 border-info">
           <div className="card-body">
             <div className="card-title text-center fs-3 fw-bold">Step 3</div>
             <hr />

@@ -9,7 +9,7 @@ function HomePage() {
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
-      <div className="fs-2 fw-bold">Learn All About Recycling, Emissions, and Zero Waste!</div>
+      <div className="fs-2 fw-bold text-info">Learn All About Recycling, Emissions, and Zero Waste!</div>
       <div className="d-flex justify-content-center align-items-center flex-wrap">{infoCardsList}</div>
     </div>
   )

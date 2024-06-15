@@ -63,12 +63,12 @@ export default function MaterialsPage() {
     <div className="d-flex flex-column justify-content-center align-items-center p-3">
       {loaded &&
         <>
-          <h1 className="text-center fw-bolder fs-1">Recyclable Materials</h1>
+          <h1 className="text-center fw-bolder fs-1 text-info">Recyclable Materials</h1>
           <div className="d-flex justify-content-center align-items-center flex-wrap">{materialsList}</div>
           {!showAddButton ?
-            <button className="btn btn-warning w-25 shadow-sm" onClick={handleShowMaterialAddForm}>Click to add a new material</button>
+            <button className="btn btn-info w-25 shadow-sm text-light" onClick={handleShowMaterialAddForm}>Click to add a new material</button>
            : 
-            <button className="btn btn-warning w-25 shadow-sm" onClick={handleShowMaterialAddForm}>Click to hide form</button>
+            <button className="btn btn-info w-25 shadow-sm" onClick={handleShowMaterialAddForm}>Click to hide form</button>
           }
           
           {showAddButton && 

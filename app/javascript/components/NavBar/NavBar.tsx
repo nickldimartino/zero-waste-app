@@ -18,7 +18,7 @@ export default function NavBar() {
             </li>
             <li className="nav-item dropdown mx-2">
               <a className="nav-link dropdown-toggle text-success fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Information
               </a>
               <ul className="dropdown-menu p-1 border border-success">
                 <li><Link className="text-success fw-bold" to="/how-to-recycle">How To</Link></li>
