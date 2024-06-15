@@ -128,3 +128,28 @@ export const benefitsCards = [
     ]
   }
 ];
+
+export const howToRecycleCards = [
+  {
+    name: "Step 1",
+    facts: [
+      "Determine the type of item you're holding by visiting the Materials page",
+      "Is it plastic? Cardboard? Metal? A banana peel? Knowing what kind of item you're holding is crucial"
+    ]
+  },
+  {
+    name: "Step 2",
+    facts: [
+      "Place the CLEAN item in the correct receptacle",
+      "If you're at home, then you should have multiple receptacles for recyclabes. For example: one for plastic films and bags, one for metals cans, bottles, and jugs, and another for cardboard boxes",
+      "If you're in a public area, there's a chance the receptacles are labeled accordingly for the item your holding"
+    ]
+  },
+  {
+    name: "Step 3",
+    facts: [
+      "If you're at home, figure out how to dispose of each receptacle",
+      "If you're collecting organics, try composting or learning about other companies that will come pick up organic recyclables"
+    ]
+  },
+]

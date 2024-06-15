@@ -1,7 +1,7 @@
 import React from 'react'
 
-function BenefitsCardItem({ name, facts }: { name: any, facts: any }) {
-  const benefitsFactsList: React.JSX.Element = facts.map((fact: string, idx: number) => {
+export default function HowToRecycleCardItems({ name, facts }: { name: any, facts: any }) {
+  const howToRecycleCardsList: React.JSX.Element = facts.map((fact: string, idx: number) => {
     return <li key={idx} className="my-2">{fact}</li>
   })
 
@@ -11,11 +11,9 @@ function BenefitsCardItem({ name, facts }: { name: any, facts: any }) {
         <div className="card-title text-center fs-3 fw-bold">{name}</div>
         <hr />
         <ul>
-          {benefitsFactsList}
+          {howToRecycleCardsList}
         </ul>
       </div>
     </div>
   )
 }
-
-export default BenefitsCardItem
