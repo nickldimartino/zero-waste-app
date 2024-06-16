@@ -45,80 +45,67 @@ industries = Industry.create([
   {
     name: "Automotive",
     recyclables: "Office Paper.Packing.Cardboard.Auto Glass.Engines.Car Batteries.Rubber Tires",
-    companies: "Porsche.Younger Nissan.Easterns Automotive Group",
-    material: materials[0]
+    companies: "Porsche.Younger Nissan.Easterns Automotive Group"
   },
   {
     name: "Bank Branch",
     recyclables: "Confidential Customer Documents and Equipment.Computers.Hard Drives.Networking Equipment",
-    companies: "NexTier Bank.PNC",
-    material: materials[3]
+    companies: "NexTier Bank.PNC"
   },
   {
     name: "Education",
     recyclables: "Food Waste.Large Event Waste.Lab and Art Supplies",
-    companies: "Howard University.GP.Kipp:Houston Public Schools.Penn State.MU",
-    material: materials[2]
+    companies: "Howard University.GP.Kipp:Houston Public Schools.Penn State.MU"
   },
   {
     name: "Grocery",
     recyclables: "Food Waste.Cardboard.Packaging.Glass.Plastics.Metals",
-    companies: "MOM's Organic Market.Natural Grocers",
-    material: materials[4]
+    companies: "MOM's Organic Market.Natural Grocers"
   },
   {
     name: "Healthcare Facilities",
     recyclables: "Office Supplies.Hazardous Waste.Non-Hazardous Waste.Paper.Plastic.Organics.E-Waste",
-    companies: "UPMC.Vi.Allegheny.LCS.ConMed.Highmark.Lincare.United Healthcare",
-    material: materials[2]
+    companies: "UPMC.Vi.Allegheny.LCS.ConMed.Highmark.Lincare.United Healthcare"
   },
   {
     name: "Hospitality",
     recyclables: "Food Waste.Construction and Demolition Debris",
-    companies: "Marriott.Sheraton.Best Western.Embassy Suites.Homewood Suites.Hyatt.Kimpton",
-    material: materials[4]
+    companies: "Marriott.Sheraton.Best Western.Embassy Suites.Homewood Suites.Hyatt.Kimpton"
   },
   {
     name: "Logistics",
     recyclables: "Ceva Logistics.Hellmann.DHL.Pittohio",
-    companies: "Pallets.Shrink Wrap.Cardboard",
-    material: materials[1]
+    companies: "Pallets.Shrink Wrap.Cardboard"
   },
   {
     name: "Manufacturing",
     recyclables: "Industrial Waste.Metals.Pallets",
-    companies: "PPG.Novolex.Pilgrim's.Mary Kay.Avery Dennison.Kennametal.Schaffner",
-    material: materials[2]
+    companies: "PPG.Novolex.Pilgrim's.Mary Kay.Avery Dennison.Kennametal.Schaffner"
   },
   {
     name: "Multi-Family Housing",
     recyclables: "Bulky Items.Furniture.Move-In/Move-Out Items",
-    companies: "FirstService Residential.PMC Property Group.Brookfield Properties",
-    material: materials[2]
+    companies: "FirstService Residential.PMC Property Group.Brookfield Properties"
   },
   {
     name: "Office Building",
     recyclables: "Cardboard.E-Waste.Paper.Plastic Film",
-    companies: "Apple.Brookfield Properties.CBRE.Safeway",
-    material: materials[5]
+    companies: "Apple.Brookfield Properties.CBRE.Safeway"
   },
   {
     name: "Property Management",
     recyclables: "Cardboard.E-Waste.Paper.Plastic Film",
-    companies: "Colliers International.Cushman & Wakefield.CBRE.The World Bank",
-    material: materials[1]
+    companies: "Colliers International.Cushman & Wakefield.CBRE.The World Bank"
   },
   {
     name: "Restaurants",
     recyclables: "Food Waste",
-    companies: "Chic-Fil-A.Dark Matter Coffee.Dunkin.McDonalds.Popeyes",
-    material: materials[4]
+    companies: "Chic-Fil-A.Dark Matter Coffee.Dunkin.McDonalds.Popeyes"
   },
   {
     name: "Retail",
     recyclables: "Cardboard.Paper.Plastic Film",
-    companies: "ACE Hardware.Forman Mills.Giant Eagle.Lazyboy.PPG",
-    material: materials[6]
+    companies: "ACE Hardware.Forman Mills.Giant Eagle.Lazyboy.PPG"
   },
 ]);
 

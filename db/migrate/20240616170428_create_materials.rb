@@ -4,6 +4,7 @@ class CreateMaterials < ActiveRecord::Migration[7.1]
       t.string :name
       t.string :tips
       t.string :facts
+      t.string :slug
 
       t.timestamps
     end

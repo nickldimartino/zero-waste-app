@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :materials, param: :slug
-      resources :industries, param: :slug
+      resources :industries
       resources :emissions
     end
   end

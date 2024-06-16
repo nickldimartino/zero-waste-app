@@ -4,10 +4,8 @@ one:
   name: MyString
   recyclables: MyString
   companies: MyString
-  material: one
 
 two:
   name: MyString
   recyclables: MyString
   companies: MyString
-  material: two

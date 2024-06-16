@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_11_223826) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_16_170535) do
   create_table "emissions", force: :cascade do |t|
     t.string "name"
     t.string "emissionType"
@@ -23,21 +23,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_11_223826) do
     t.string "name"
     t.string "recyclables"
     t.string "companies"
-    t.integer "material_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["material_id"], name: "index_industries_on_material_id"
   end
 
   create_table "materials", force: :cascade do |t|
     t.string "name"
     t.string "tips"
     t.string "facts"
+    t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_materials_on_slug", unique: true
   end
 
-  add_foreign_key "industries", "materials"
 end

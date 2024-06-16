@@ -56,12 +56,7 @@ module Api
 
       # Strong params
       def material_params
-        params.require(:material).permit(:name, :tips, :facts)
-      end
-
-      # Used For compound documents with fast_jsonapi
-      def options
-        @options ||= { include: %i[industry] }
+        params.require(:material).permit(:name, :tips, :facts, :slug)
       end
     end
   end

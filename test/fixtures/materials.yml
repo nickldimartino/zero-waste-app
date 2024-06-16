@@ -4,8 +4,10 @@ one:
   name: MyString
   tips: MyString
   facts: MyString
+  slug: MyString
 
 two:
   name: MyString
   tips: MyString
   facts: MyString
+  slug: MyString

@@ -59,6 +59,8 @@ export default function MaterialsPage() {
     return (<MaterialItem key={idx} attributes={material.attributes}></MaterialItem>)
   });
 
+  console.log(materials)
+
   return (
     <div className="d-flex flex-column justify-content-center align-items-center p-3">
       {loaded &&
