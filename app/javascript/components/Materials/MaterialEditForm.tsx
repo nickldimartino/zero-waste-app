@@ -18,7 +18,7 @@ export default function MaterialEditForm() {
   const navigate = useNavigate();
 
   // update the editMaterial state whenever the user inputs values
-  const handleChange = (evt: any) => {
+  const handleChange = (evt: React.ChangeEvent<any> ) => {
     evt.preventDefault();
     const newMaterialData = {
       ...editMaterial,
@@ -28,7 +28,7 @@ export default function MaterialEditForm() {
   };
 
   // updates the editted material in the database when the form is submitted
-  const handleSubmit = (evt: any) => {
+  const handleSubmit = (evt: React.ChangeEvent<any>) => {
     // prevent the page refresh on submission
     evt.preventDefault();
 
@@ -44,7 +44,7 @@ export default function MaterialEditForm() {
     const slug = location.pathname.split("/").pop();
 
     // URL for the axios request
-    const url = `/api/v1/materials/${slug}`;
+    const url: string = `/api/v1/materials/${slug}`;
 
     // change the name of the state for the axios request
     const material: any = editMaterial;
@@ -52,7 +52,7 @@ export default function MaterialEditForm() {
     // PATCH (update) request to the Rails backend with the editted material
     axios
       .patch(url, { material })
-      .then((res: any) => {
+      .then(() => {
         // edit the material state
         setEditMaterial(editMaterial);
 

@@ -50,3 +50,22 @@ export interface MaterialType {
     slug: string
   ]
 }
+
+export interface EmissionAttributesType {
+  name: string,
+  emissionType: string,
+  cause: string
+}
+
+export interface IndustryAttributesType {
+  name: string,
+  companies: string,
+  recyclables: string
+}
+
+export interface MaterialAttributesType {
+  name: string,
+  tips: string,
+  facs: string,
+  slug: string
+}

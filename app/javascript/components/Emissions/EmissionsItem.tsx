@@ -1,11 +1,16 @@
 // ---------------------------------- Modules -----------------------------------
 // External
 import React from "react";
+import { EmissionAttributesType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
-export default function EmissionsItem({ attributes }: { attributes: any }) {
+export default function EmissionsItem({
+  attributes,
+}: {
+  attributes: EmissionAttributesType;
+}) {
   // render the Emissions item with the received attributes
-  const causeList: any = attributes.cause.split(".");
+  const causeList: string[] = attributes.cause.split(".");
 
   return (
     <div

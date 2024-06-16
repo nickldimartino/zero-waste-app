@@ -1,6 +1,6 @@
 // ---------------------------------- Modules -----------------------------------
 // External
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
@@ -33,7 +33,7 @@ export default function Material() {
     // DELETE request to the Rails backend
     axios
       .delete(url)
-      .then((res: any) => {
+      .then((res: AxiosResponse<any, any>) => {
         console.log(res.data);
       })
       .catch((res: any) => {
@@ -49,14 +49,14 @@ export default function Material() {
     // GET request to the Rails backend
     axios
       .get(url)
-      .then((res) => {
+      .then((res: AxiosResponse<any, any>) => {
         // set the current material from the database
         setMaterial(res.data.data);
 
         // set the loaded state to true
         setLoaded(true);
       })
-      .catch((res) => console.log(res));
+      .catch((res: any) => console.log(res));
   }, []);
 
   // render the Material page

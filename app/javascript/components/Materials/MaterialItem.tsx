@@ -2,9 +2,14 @@
 // External
 import React from "react";
 import { Link } from "react-router-dom";
+import { MaterialAttributesType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
-export default function MaterialItem({ attributes }: { attributes: any }) {
+export default function MaterialItem({
+  attributes,
+}: {
+  attributes: MaterialAttributesType;
+}) {
   // render the Material
   return (
     <div className="card m-3 bg-info rounded shadow" style={{ width: "18rem" }}>

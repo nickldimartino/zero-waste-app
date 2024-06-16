@@ -7,11 +7,11 @@ export default function HowToRecycleCardItems({
   name,
   facts,
 }: {
-  name: any;
-  facts: any;
+  name: string;
+  facts: string[];
 }) {
   // create a list of How To Recyle Card list items
-  const howToRecycleCardsList: React.JSX.Element = facts.map(
+  const howToRecycleCardsList: React.JSX.Element[] = facts.map(
     (fact: string, idx: number) => {
       return (
         <li key={idx} className="my-2">

@@ -8,12 +8,12 @@ export default function RoadmapCardItem({
   info,
   other,
 }: {
-  name: any;
-  info: any;
-  other: any;
+  name: string;
+  info: string[];
+  other: string[];
 }) {
   // create a list for each info item
-  const infoList: any = info.map((i: any, idx: number) => {
+  const infoList: React.JSX.Element[] = info.map((i: string, idx: number) => {
     return (
       <li key={idx} className="text-light my-2">
         {i}
@@ -22,7 +22,7 @@ export default function RoadmapCardItem({
   });
 
   // create a list for each other info item
-  const otherList: any = other.map((i: any, idx: number) => {
+  const otherList: React.JSX.Element[] = other.map((i: string, idx: number) => {
     return (
       <li key={idx} className="text-light my-2">
         {i}

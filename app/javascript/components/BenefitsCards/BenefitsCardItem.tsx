@@ -7,11 +7,11 @@ export default function BenefitsCardItem({
   name,
   facts,
 }: {
-  name: any;
-  facts: any;
+  name: string;
+  facts: string[];
 }) {
   // create a list of the benefits facts as list items
-  const benefitsFactsList: React.JSX.Element = facts.map(
+  const benefitsFactsList: React.JSX.Element[] = facts.map(
     (fact: string, idx: number) => {
       return (
         <li key={idx} className="my-2">

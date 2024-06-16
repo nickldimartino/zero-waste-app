@@ -1,9 +1,14 @@
 // ---------------------------------- Modules -----------------------------------
 // External
 import React from "react";
+import { IndustryAttributesType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
-export default function IndustryItem({ attributes }: { attributes: any }) {
+export default function IndustryItem({
+  attributes,
+}: {
+  attributes: IndustryAttributesType;
+}) {
   // parse the attributes companies and recyclable strings into arrays
   const companies = attributes.companies.split(".");
   const recyclables = attributes.recyclables.split(".");
@@ -18,7 +23,7 @@ export default function IndustryItem({ attributes }: { attributes: any }) {
   });
 
   // create a list for each recyclable
-  const recyclablesList: any = recyclables.map(
+  const recyclablesList: React.JSX.Element[] = recyclables.map(
     (recyclable: string, idx: number) => {
       return (
         <li key={idx} className="fs-7 text-light fst-italic">

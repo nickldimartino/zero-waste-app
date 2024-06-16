@@ -9,9 +9,9 @@ export default function InfoCardItem({
   info,
   link,
 }: {
-  name: any;
-  info: any;
-  link: any;
+  name: string;
+  info: string;
+  link: string;
 }) {
   // render the Info card
   return (
