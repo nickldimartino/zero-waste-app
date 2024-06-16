@@ -1,3 +1,4 @@
+// constants for the Home Page
 export const infoCards: any = [
   {
     name: "How To Recycle",
@@ -31,6 +32,7 @@ export const infoCards: any = [
   },
 ];
 
+// constants for the Roadmap Page
 export const roadmapCards: any = [
   {
     name: "Collection",
@@ -74,6 +76,7 @@ export const roadmapCards: any = [
   }
 ];
 
+// constants for the Benefits Page
 export const benefitsCards = [
   {
     name: "Environment",
@@ -129,6 +132,7 @@ export const benefitsCards = [
   }
 ];
 
+// constants for the How To Recycle Page
 export const howToRecycleCards = [
   {
     name: "Step 1",
@@ -152,4 +156,4 @@ export const howToRecycleCards = [
       "If you're collecting organics, try composting or learning about other companies that will come pick up organic recyclables"
     ]
   },
-]
+];

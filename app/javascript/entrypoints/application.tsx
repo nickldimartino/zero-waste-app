@@ -7,12 +7,14 @@ import App from "../pages/App/App";
 // yarn build
 // bundle exec rails s
 
+// create the React DOM root element
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
+// render the root element with React Router for in-app routes
 root.render(
   <Router>
-      <App />
+    <App />
   </Router>
 );

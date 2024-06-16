@@ -1,71 +1,54 @@
+// ---------------------------------- Modules -----------------------------------
+// External
+import axios from "axios";
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
+
+// Internal
 import IndustryItem from "../../components/Industries/IndustryItem";
 
+// ---------------------------------- Component ---------------------------------
 export default function IndustriesPage() {
+  // state variables
   const [loaded, setLoaded] = useState(false);
-  const [showAddButton, setShowAddButton] = useState(false);
   const [industries, setIndustries] = useState<any>([]);
-  const [industry, setIndustry] = useState({
-    name: "",
-    recyclables: "",
-    companies: ""
-  });
 
-  const handleShowIndustryAddForm = () => {
-    setShowAddButton(!showAddButton);
-  }
-
-  const handleChange = (evt: any) => {
-    evt.preventDefault();
-    const newIndustryData = {
-      ...industry,
-      [evt.target.name]: evt.target.value,
-    };
-    setIndustry(newIndustryData)
-  }
-
-  const handleSubmit = (evt: any) => {
-    const csrfToken: any = document.querySelector('[name=csrf-token]')?.getAttribute('content');
-    axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
-
-    axios.post(`/api/v1/industries`, { industry })
-      .then((res: any) => {
-        setIndustries([...industries, industry])
-
-        setIndustry({
-          name: "",
-          recyclables: "",
-          companies: ""
-        });
-      })
-      .catch(res => console.log("Error" + res))
-  }
-
+  // hook for when the page renders
   useEffect(() => {
-    // get all industries from api
-    // update industries in our state
-
-    axios.get('/api/v1/industries.json')
-      .then(res => {
+    // send a GET request to the Rails backend and get the industries in the database
+    axios
+      .get("/api/v1/industries.json")
+      .then((res) => {
+        // set the industries state with the received industries from the database
         setIndustries(res.data.data);
+
+        // set the loaded state to true
         setLoaded(true);
       })
-      .catch(res => console.log(res))
-  }, [industries.length]);
+      .catch((res) => console.log(res));
+  }, []);
 
-  const industriesList: React.JSX.Element[] = industries.map((industry: any, idx: number) => {
-    return (<IndustryItem key={idx} attributes={industry.attributes}></IndustryItem>)
-  });
+  // create a list of all the industry items
+  const industriesList: React.JSX.Element[] = industries.map(
+    (industry: any, idx: number) => {
+      return (
+        <IndustryItem key={idx} attributes={industry.attributes}></IndustryItem>
+      );
+    }
+  );
 
+  // render the Industries Page
   return (
     <div className="d-flex flex-column justify-content-center align-items-center p-3">
-      {loaded &&
+      {loaded && (
         <>
-          <h1 className="text-center fw-bold fs-1 text-info">Impacted Industries and Companies of RoadRunner Waste Management</h1>
-          <div className="d-flex justify-content-center align-items-center flex-wrap">{industriesList}</div>
+          <h1 className="text-center fw-bold fs-1 text-info">
+            Impacted Industries and Companies of RoadRunner Waste Management
+          </h1>
+          <div className="d-flex justify-content-center align-items-center flex-wrap">
+            {industriesList}
+          </div>
         </>
-      }
+      )}
     </div>
   );
 }
