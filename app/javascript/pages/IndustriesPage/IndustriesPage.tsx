@@ -1,6 +1,6 @@
 // ---------------------------------- Modules -----------------------------------
 // External
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import React, { useState, useEffect } from "react";
 
 // Internal
@@ -18,7 +18,7 @@ export default function IndustriesPage() {
     // send a GET request to the Rails backend and get the industries in the database
     axios
       .get("/api/v1/industries.json")
-      .then((res) => {
+      .then((res: AxiosResponse<any, any>) => {
         // set the industries state with the received industries from the database
         setIndustries(res.data.data);
 

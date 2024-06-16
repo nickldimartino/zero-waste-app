@@ -20,37 +20,6 @@ export interface HowToRecycleCardType {
   facts: string[]
 }
 
-export interface EmissionType {
-  id: string,
-  type: string,
-  attributes: [
-    name: string,
-    emissionType: string,
-    cause: string
-  ]
-}
-
-export interface IndustryType {
-  id: string,
-  type: string,
-  attributes: [
-    name: string,
-    companies: string,
-    recyclables: string
-  ]
-}
-
-export interface MaterialType {
-  id: string,
-  type: string,
-  attributes: [
-    name: string,
-    tips: string,
-    facts: string,
-    slug: string
-  ]
-}
-
 export interface EmissionAttributesType {
   name: string,
   emissionType: string,
@@ -69,3 +38,22 @@ export interface MaterialAttributesType {
   facs: string,
   slug: string
 }
+
+export interface EmissionType {
+  id: string,
+  type: string,
+  attributes: EmissionAttributesType
+}
+
+export interface IndustryType {
+  id: string,
+  type: string,
+  attributes: IndustryAttributesType
+}
+
+export interface MaterialType {
+  id: string,
+  type: string,
+  attributes: MaterialAttributesType
+}
+

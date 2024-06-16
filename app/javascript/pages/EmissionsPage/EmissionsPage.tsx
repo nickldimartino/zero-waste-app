@@ -1,6 +1,6 @@
 // ---------------------------------- Modules -----------------------------------
 // External
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import React, { useEffect, useState } from "react";
 
 // Interal
@@ -18,7 +18,7 @@ export default function EmissionsPage() {
     // send a GET request to the Rails backend and get the emissions in the database
     axios
       .get("/api/v1/emissions.json")
-      .then((res) => {
+      .then((res: AxiosResponse<any, any>) => {
         // set the received emissions from the database to the state
         setEmissions(res.data.data);
 

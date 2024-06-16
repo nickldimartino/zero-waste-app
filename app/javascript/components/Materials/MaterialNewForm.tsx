@@ -7,8 +7,8 @@ export default function MaterialNewForm({
   handleChange,
   handleSubmit,
 }: {
-  handleChange: ()=>{};
-  handleSubmit: ()=>{};
+  handleChange: any;
+  handleSubmit: any;
 }) {
   // render the New Material Form
   return (
