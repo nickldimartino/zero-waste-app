@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 // Internal
 import MaterialItem from "../../components/Materials/MaterialItem";
 import MaterialForm from "../../components/Materials/MaterialNewForm";
+import { MaterialType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
 export default function MaterialsPage() {
@@ -25,7 +26,7 @@ export default function MaterialsPage() {
   };
 
   // update the state of a material as a user types
-  const handleChange = (evt: any) => {
+  const handleChange = (evt: React.ChangeEvent<any>) => {
     evt.preventDefault();
     const newMaterialData = {
       ...material,
@@ -35,7 +36,7 @@ export default function MaterialsPage() {
   };
 
   // adds the user inputted material to the database
-  const handleSubmit = (evt: any) => {
+  const handleSubmit = (evt: React.ChangeEvent<any>) => {
     // create a CSRF token for the POSZ request
     const csrfToken: any = document
       .querySelector("[name=csrf-token]")
@@ -47,7 +48,7 @@ export default function MaterialsPage() {
     // send a POST request to the Rails backend with the material
     axios
       .post(`/api/v1/materials`, { material })
-      .then((res: any) => {
+      .then(() => {
         // set the received materials from the database to the state
         setMaterials([...materials, material]);
 
@@ -66,7 +67,7 @@ export default function MaterialsPage() {
     // GET request the the Rails backend
     axios
       .get("/api/v1/materials.json")
-      .then((res) => {
+      .then((res: any) => {
         // update the materials state with the received materials
         setMaterials(res.data.data);
 
@@ -78,7 +79,7 @@ export default function MaterialsPage() {
 
   // create a list of Materials items
   const materialsList: React.JSX.Element[] = materials.map(
-    (material: any, idx: number) => {
+    (material: MaterialType, idx: number) => {
       return (
         <MaterialItem key={idx} attributes={material.attributes}></MaterialItem>
       );

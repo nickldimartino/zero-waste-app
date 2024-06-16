@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 
 // Interal
 import EmissionsItem from "../../components/Emissions/EmissionsItem";
+import { EmissionType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
 export default function EmissionsPage() {
@@ -29,7 +30,7 @@ export default function EmissionsPage() {
 
   // crreate a list of the Emssions items from the database
   const emissionsList: React.JSX.Element[] = emissions.map(
-    (emission: any, idx: number) => {
+    (emission: EmissionType, idx: number) => {
       return (
         <EmissionsItem
           key={idx}

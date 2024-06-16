@@ -5,17 +5,18 @@ import React from "react";
 // Internal
 import HowToRecycleCardItems from "../../components/HowToRecycleCards/HowToRecycleCardItems";
 import { howToRecycleCards } from "../../constants";
+import { HowToRecycleCardType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
 export default function HowToRecyclePage() {
   // create a list of the How To Recycle Card items
   const howToRecycleCardsList: any = howToRecycleCards.map(
-    (benefit: any, idx: number) => {
+    (card: HowToRecycleCardType, idx: number) => {
       return (
         <HowToRecycleCardItems
           key={idx}
-          name={benefit.name}
-          facts={benefit.facts}
+          name={card.name}
+          facts={card.facts}
         />
       );
     }

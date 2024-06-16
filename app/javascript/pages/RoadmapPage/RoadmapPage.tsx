@@ -5,12 +5,13 @@ import React from "react";
 // Internal
 import RoadmapCardItem from "../../components/RoadmapCards/RoadmapCardItem";
 import { roadmapCards } from "../../constants";
+import { RoadmapCardType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
 export default function RoadmapPage() {
   // create a list of all the Roadmap Card items
   const roadmapCardsList: React.JSX.Element = roadmapCards.map(
-    (card: any, idx: number) => {
+    (card: RoadmapCardType, idx: number) => {
       return (
         <RoadmapCardItem
           key={idx}

@@ -5,14 +5,16 @@ import React from "react";
 // Internal
 import InfoCardItem from "../../components/InfoCards/InfoCardItem";
 import { infoCards } from "../../constants";
+import { InfoCardType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
 export default function HomePage() {
   // create an Info Card list of all the Home Page information
   const infoCardsList: React.JSX.Element = infoCards.map(
-    (card: any, idx: number) => {
+    (card: InfoCardType, idx: number) => {
       return (
         <InfoCardItem
+          key={idx}
           name={card.name}
           info={card.info}
           link={card.link}

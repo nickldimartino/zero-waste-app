@@ -5,12 +5,13 @@ import React from "react";
 // Internal
 import BenefitsCardItem from "../../components/BenefitsCards/BenefitsCardItem";
 import { benefitsCards } from "../../constants";
+import { BenefitCardType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
 export default function BenefitsPage() {
   // create a list of the the cards for each benefit
-  const benefitsCardsList: any = benefitsCards.map(
-    (benefit: any, idx: number) => {
+  const benefitsCardsList: React.JSX.Element[] = benefitsCards.map(
+    (benefit: BenefitCardType, idx: number) => {
       return (
         <BenefitsCardItem key={idx} name={benefit.name} facts={benefit.facts} />
       );

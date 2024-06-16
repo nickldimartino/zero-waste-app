@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 
 // Internal
 import IndustryItem from "../../components/Industries/IndustryItem";
+import { IndustryType } from "../../types";
 
 // ---------------------------------- Component ---------------------------------
 export default function IndustriesPage() {
@@ -29,7 +30,7 @@ export default function IndustriesPage() {
 
   // create a list of all the industry items
   const industriesList: React.JSX.Element[] = industries.map(
-    (industry: any, idx: number) => {
+    (industry: IndustryType, idx: number) => {
       return (
         <IndustryItem key={idx} attributes={industry.attributes}></IndustryItem>
       );
