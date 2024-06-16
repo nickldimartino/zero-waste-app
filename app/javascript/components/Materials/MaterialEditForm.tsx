@@ -1,67 +1,117 @@
-import axios from 'axios';
-import React, { useState } from 'react'
+// ---------------------------------- Modules -----------------------------------
+// External
+import axios from "axios";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-type Props = {}
-
-function MaterialEditForm() {
+// ---------------------------------- Component ---------------------------------
+export default function MaterialEditForm() {
+  // state variable for the edit material
   const [editMaterial, setEditMaterial] = useState<any>({
     name: "",
     tips: "",
-    facts: ""
+    facts: "",
   });
+
+  // get the location and navigation
   const location = useLocation();
   const navigate = useNavigate();
 
+  // update the editMaterial state whenever the user inputs values
   const handleChange = (evt: any) => {
     evt.preventDefault();
     const newMaterialData = {
       ...editMaterial,
       [evt.target.name]: evt.target.value,
     };
-    setEditMaterial(newMaterialData)
-  }
+    setEditMaterial(newMaterialData);
+  };
 
+  // updates the editted material in the database when the form is submitted
   const handleSubmit = (evt: any) => {
+    // prevent the page refresh on submission
     evt.preventDefault();
-    const csrfToken: any = document.querySelector('[name=csrf-token]')?.getAttribute('content');
-    axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
 
+    // create a CSRF token
+    const csrfToken: any = document
+      .querySelector("[name=csrf-token]")
+      ?.getAttribute("content");
+
+    // updates the axios header with the created CSRF token
+    axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
+
+    // get the slug id from the URL
     const slug = location.pathname.split("/").pop();
-    const url = `/api/v1/materials/${slug}`;
-    const material: any = editMaterial;
-    axios.patch(url, { material })
-      .then((res: any) => {
-        setEditMaterial(editMaterial)
 
+    // URL for the axios request
+    const url = `/api/v1/materials/${slug}`;
+
+    // change the name of the state for the axios request
+    const material: any = editMaterial;
+
+    // PATCH (update) request to the Rails backend with the editted material
+    axios
+      .patch(url, { material })
+      .then((res: any) => {
+        // edit the material state
+        setEditMaterial(editMaterial);
+
+        // update the state to be empty
         setEditMaterial({
           name: "",
           tips: "",
-          facts: ""
+          facts: "",
         });
 
+        // navigate to the previous page (Materials Page)
         navigate(-1);
       })
-      .catch(res => console.log("Error" + res))
-  }
+      .catch((res) => console.log("Error" + res));
+  };
 
+  // render the Material Edit Form
   return (
     <div className="d-flex justify-content-center">
-      <form onSubmit={handleSubmit} className="border border-2 border-info shadow m-2 p-1 bg-info text-light rounded d-flex flex-column justify-content-center align-items-center" style={{"width": "50%"}}>
+      <form
+        onSubmit={handleSubmit}
+        className="border border-2 border-info shadow m-2 p-1 bg-info text-light rounded d-flex flex-column justify-content-center align-items-center"
+        style={{ width: "50%" }}
+      >
         <div className="fs-4">Edit the Material</div>
         <div className="mb-1 w-75">
-          <input name="name" onChange={handleChange} type="text" className="form-control" id="material-name" placeholder="Material Name" />
+          <input
+            name="name"
+            onChange={handleChange}
+            type="text"
+            className="form-control"
+            id="material-name"
+            placeholder="Material Name"
+          />
         </div>
         <div className="mb-1 w-75">
-          <input name="tips" onChange={handleChange} type="text" className="form-control" id="material-tips" placeholder="Material Tips" />
+          <input
+            name="tips"
+            onChange={handleChange}
+            type="text"
+            className="form-control"
+            id="material-tips"
+            placeholder="Material Tips"
+          />
         </div>
         <div className="mb-1 w-75">
-          <input name="facts" onChange={handleChange} type="text" className="form-control" id="material-facts" placeholder="Material Facts" />
+          <input
+            name="facts"
+            onChange={handleChange}
+            type="text"
+            className="form-control"
+            id="material-facts"
+            placeholder="Material Facts"
+          />
         </div>
-        <button type="submit" className="btn btn-light my-2 w-25">Submit</button>
+        <button type="submit" className="btn btn-light my-2 w-25">
+          Submit
+        </button>
       </form>
     </div>
-  )
+  );
 }
-
-export default MaterialEditForm
