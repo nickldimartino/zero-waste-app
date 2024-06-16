@@ -7,12 +7,12 @@ module Api
 
       # GET /api/v1/industries
       def index
+        # get all of the industries from the database
         industries = Industry.all
 
+        # render all of the emissions on the page 
         render json: IndustrySerializer.new(industries).serialized_json
       end
-
-      private
     end
   end
 end
