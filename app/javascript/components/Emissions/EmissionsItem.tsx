@@ -5,6 +5,8 @@ import React from "react";
 // ---------------------------------- Component ---------------------------------
 export default function EmissionsItem({ attributes }: { attributes: any }) {
   // render the Emissions item with the received attributes
+  const causeList: any = attributes.cause.split(".");
+
   return (
     <div
       className="card m-3 bg-info border border-2 border-info rounded shadow"
@@ -19,7 +21,8 @@ export default function EmissionsItem({ attributes }: { attributes: any }) {
         <div className="fs-6 text-light">{attributes.emissionType}</div>
         <hr />
         <div className="fs-5 text-light fw-bold mt-2">Cause</div>
-        <div className="fs-6 text-light">{attributes.cause}</div>
+        <div className="fs-6 text-light my-2">{causeList[0]}</div>
+        <div className="fs-6 text-light mt-2">{causeList[1]}</div>
       </div>
     </div>
   );

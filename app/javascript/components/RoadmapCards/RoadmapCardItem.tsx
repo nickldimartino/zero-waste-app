@@ -34,7 +34,7 @@ export default function RoadmapCardItem({
   return (
     <div
       className="card m-3 bg-info border-2 border-info rounded shadow"
-      style={{ width: "22rem", height: "46rem" }}
+      style={{ width: "22rem", height: "54rem" }}
     >
       <div className="card-body d-flex flex-column">
         <div className="card-title text-center fs-4 text-light fw-bold">

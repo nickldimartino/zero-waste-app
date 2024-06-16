@@ -118,7 +118,7 @@ emissions = Emission.create([
   {
     name: "Scope 2",
     emissionType: "Indirect Emissions",
-    cause: "Sources a ompany causes indirectly and come from where the energy it purchases and uses is produced.Example: Generating electricity used in buildings"
+    cause: "Sources a company causes indirectly and come from where the energy it purchases and uses is produced.Example: Generating electricity used in buildings"
   },
   {
     name: "Scope 3",
